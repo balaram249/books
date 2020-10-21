@@ -34,12 +34,12 @@ now execute the java class target.classes.com.example.purchase.PurchaseApplicati
 ### Client API
 | HTTP MetHod | ENDPOINT      |Query String                                                               | description |Response  |                                
 |-------------|----------------|----------------------------------------------------------------------------|--------------------------------------------------|-------------------|
-| GET        | "/purchase/client" | | 200 status code with "OK"    | -- |
-| GET        | "/purchase/client" |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
-| GET        | "/purchase/client" |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
-| GET        | "/purchase/client" |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
-| GET        | "/purchase/client" |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
-| GET        | "/purchase/client" |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
+| GET        | "/purchase/client" | --| shows all the products  | success: 200 WITH "OK" Fail : - |
+| GET        | "/purchase/client/category/isWireless" |value=<boolean > | Success: 200 with "OK" Fail:    | -- |
+| GET        | "/purchase/client/isTouchscreen" | value=<boolean >| 200 status code with "OK"    | -- |
+| GET        | "/purchase/client/isInteroperable" |value=<boolean >| 200 status code with "OK"    | -- |
+| GET        | "/purchase/client/name" |name=<String > | 200 status code with "OK"    | -- |
+
 
 
 
