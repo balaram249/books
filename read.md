@@ -32,9 +32,9 @@ now execute the java class target.classes.com.example.purchase.PurchaseApplicati
 
 
 ### Client API
-| HTTP MetHod | ENDPOINT       | Querystring       |Description                                                                | Success Response                                 | Failure Response  |
+| HTTP MetHod | ENDPOINT       | Querystring       |Description                                                                | Success Response | Failure Response  |                                
 |-------------|----------------|----------------------------------------------------------------------------|--------------------------------------------------|-------------------|
-| GET        | "/purchase/client"      | "/purchase/client"      |  Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
+| GET        | "/purchase/client"      | "/purchase/client"        |  Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
 | GET        | "/purchase/client"      |   "/purchase/client"      |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
 | GET        | "/purchase/client"      |   "/purchase/client"      |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
 | GET        | "/purchase/client"      |   "/purchase/client"      |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
