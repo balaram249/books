@@ -32,14 +32,14 @@ now execute the java class target.classes.com.example.purchase.PurchaseApplicati
 
 
 ### Client API
-| HTTP MetHod | ENDPOINT      |a  |Description                                                                | Success Response | Failure Response  |                                
+| HTTP MetHod | ENDPOINT      |Description                                                                | Success Response | Failure Response  |                                
 |-------------|----------------|----------------------------------------------------------------------------|--------------------------------------------------|-------------------|
-| GET        | "/purchase/client" |a  | Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
-| GET        | "/purchase/client" |a  | Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
-| GET        | "/purchase/client" |a  |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
-| GET        | "/purchase/client" |a  |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
-| GET        | "/purchase/client" |a  |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
-| GET        | "/purchase/client" |a  |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
+| GET        | "/purchase/client" |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
+| GET        | "/purchase/client" |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
+| GET        | "/purchase/client" |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
+| GET        | "/purchase/client" |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
+| GET        | "/purchase/client" |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
+| GET        | "/purchase/client" |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
 
 
 
