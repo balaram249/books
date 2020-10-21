@@ -9,7 +9,7 @@ It serves both the customer as well as Philips personnel.
 2. [Setup](#Setup)
 3. [Executing](#Executing)
 4. [APIs Created](#ApiCreated)
-5. [Goal Set and Achieved](#Goalset)
+
 
 ## Prerequisites
 This application is built on java and utilises spring boot frame work and MySQL database server running on port 3306.This project uses Maven as build tool and project management system.So, Java>8,MySQL >=8.0 and maven>=4.0 are necessary for running this project.
