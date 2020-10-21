@@ -6,40 +6,24 @@ It serves both the customer as well as Philips personnel.
 
 ## Index
 1. [Prerequisites](#Prerequisites)
-2. [Compiling](#Compiling)
+2. [Setup](#Setup)
 3. [Executing](#Executing)
 4. [APIs Created](#ApiCreated)
 5. [Goal Set and Achieved](#Goalset)
 
 ## Prerequisites
-Firstly, the project makes use of Spring Boot in order to build the source files and hence, the target system must have a Spring tool suite (recommmended: Spring 3.0) .
-Then, the target system must have Java (>=8) installed and available in the system path.
-The project makes use of Maven as the build tool and hence, Maven must also be in the system path.
-Also, SQLite must be installed on the system. 
+This application is built on java and utilises spring boot frame work and MySQL database server running on port 3306.This project uses Maven as build tool and project management system.So, Java>8,MySQL >=8.0 and maven>=4.0 are necessary for running this project.
 
-## Compiling
-In the root directory of the project, a batch file by the name "AutoBuildTest.bat" is present. 
-Run the batch file in the command line and it will compile the sources and execute the test cases.  
-```
-./../Monitoring-System-API> AutoBuildTest.bat
+## Setup
+Clone the repo into your local system and in the root directory of the project, a sql file by the name "db.sql" is present. 
+Open the MySQL command line and run the command  
+```source <path_to_sql_file>
 ```  
-Once the batch file has sucessfully executed, you should be able to see a `"build successful"` message.
-
-NOTE 1: This AutoBuildTest.bat also runs JaCoCo code coverage library and you can check the code coverage report by opening `"index.html"` in browser. 
-
-```
-./target/site/jacoco> index.html
-```
-
-NOTE 2: This AutoBuildTest.bat also runs javancss cyclomatic cmplexity measuring library and you can check the cyclomatic complexity report by opening `"javancss.html"` in browser. 
-
-```
-./target/site> javancss.html
-```
+  and the server would exceute the sql queries and create the database.
 
 
 ## Execution
-Once the main spring application (com.example.demo) has been run,Tomcat apache server would set up.
+now execute the java class target.classes.com.example.purchase.PurchaseApplication.class 
 
 ## APIs Created
 
