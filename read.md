@@ -44,20 +44,10 @@ now execute the java class target.classes.com.example.purchase.PurchaseApplicati
 
 
 
-### Customer Service API
+### Admin API
 
-| HTTP Mehtod | API URL        | Description                                                                | Success Response                                 | Failure Response  |
+| HTTP Method |Enpoint        | Query String                                                                | Description                               |  Response  |
 |-------------|----------------|----------------------------------------------------------------------------|--------------------------------------------------|-------------------|
-| POST        | "monitor/category/touchscreen/interoperability/connectivity_EMR/selectFinalProduct{monitorID}"      | This adds a new request for the selected product to the system | 201 status code 'CREATED'  | 400 status code 'BAD REQUEST' |
-| GET         | "/monitor/category"      |Display list of category of monitors in the system              | 200 status code 'OK'                   | --                |
-| GET         | "/monitor/category/Touchscreen" | Fetches the details of the particular monitor with touchscreen property                                   | status code 200 with 'NO CONTENT'  | status code 404 'NOT FOUND'    |
-| GET         | "/monitor/category/Touchscreen" | Fetches the details of the particular monitor with touchscreen property                                   | status code 200 with 'NO CONTENT'  | status code 404 'NOT FOUND'    |
-
-| GET         | "/monitor/category/touchscreen/interoperability/connectivity_EMR" | Fetches the details of the particular monitor with touchscreen, interoperability and connectivity_EMRproperty  as property                                 | status code 200 with 'NO CONTENT'  | status code 404 'NOT FOUND'    |
-
-| GET         | "/monitor/category/touchscreen/interoperability" | Fetches the details of the particular monitor with touchscreen and interopability property                                   | status code 200 with 'NO CONTENT'  | status code 404 'NOT FOUND'    |
-| GET         | "/monitor/category/touchscreen/nointeroperability" | Fetches the details of the particular monitor with touchscreen and  no interopability property                                   | status code 200 with 'NO CONTENT'  | status code 404 'NOT FOUND'    |
-
-
-For more info on the API's, start the springboot application and goto 
-http://localhost:8080/monitor on the browser.
+| POST        | "/purchase/admin/"      | name=<String >&price=<Boolean >&isWireless=<Boolean >&isTouchscreen=<Boolean >&isInteroperable=<Boolean > |  adds a product to the database | success: 201 status code 'CREATED' |
+| DELETE       | "/purchase/admin/"      |id=<int >          |                 | deletes a product with given id              | success: 200 status code 'OK'  Fail:- 400 with "product does not exist"
+| PUT      | "/purchase/admin/" | name=<String >&price=<Boolean >&isWireless=<Boolean >&isTouchscreen=<Boolean >&isInteroperable=<Boolean >                                 updates the product with given parameters| success: 200 with "OK" Fail:-400 "cannot be update because no product with given specifications"    |
