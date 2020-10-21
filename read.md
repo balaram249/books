@@ -17,9 +17,11 @@ This application is built on java and utilises spring boot frame work and MySQL 
 ## Setup
 Clone the repo into your local system and in the root directory of the project, a sql file by the name "db.sql" is present. 
 Open the MySQL command line and run the command  
-```source <path_to_sql_file>
+
+```   
+source <path_to_sql_file>
 ```  
-  and the server would exceute the sql queries and create the database.
+  and the server would create the database philips_products required for project.
 
 
 ## Execution
@@ -29,13 +31,16 @@ now execute the java class target.classes.com.example.purchase.PurchaseApplicati
 
 
 
-### Monitor Service API
-| HTTP Mehtod | API URL        | Description                                                                | Success Response                                 | Failure Response  |
+### Client API
+| HTTP MetHod | ENDPOINT       | Querystring       |Description                                                                | Success Response                                 | Failure Response  |
 |-------------|----------------|----------------------------------------------------------------------------|--------------------------------------------------|-------------------|
-| GET        | "/monitor"      |  Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
-| POST        | "/monitor/newmonitor"      |  This adds a new monitor to the system  | 201 status code with "CREATED"    | -- |
-| GET         | "/monitor/{monitorId}" | Fetches the details of monitor with the monitorID = "id"                                   | 200 Status code 'OK' | 404 status code 'Not Found'     |
-| DELETE      | "/monitor/delete/{id}"  | Deletes specified record of monitor                                                  | 204 status code 'NO CONTENT'                                   | 400 status code 'BAD REQUEST'     |
+| GET        | "/purchase/client"      | "/purchase/client"      |  Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
+| GET        | "/purchase/client"      |   "/purchase/client"      |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
+| GET        | "/purchase/client"      |   "/purchase/client"      |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
+| GET        | "/purchase/client"      |   "/purchase/client"      |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
+| GET        | "/purchase/client"      |   "/purchase/client"      |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
+| GET        | "/purchase/client"      |   "/purchase/client"      |Fetches list of all monitors in the system along with their status | 200 status code with "OK"    | -- |
+
 
 
 
