@@ -35,10 +35,10 @@ now execute the java class target.classes.com.example.purchase.PurchaseApplicati
 | HTTP MetHod | ENDPOINT      |Query String                                                               | description |Response  |                                
 |-------------|----------------|----------------------------------------------------------------------------|--------------------------------------------------|-------------------|
 | GET        | "/purchase/client" | --| shows all the products  | success: 200 WITH "OK" Fail : - |
-| GET        | "/purchase/client/category/isWireless" |value=<boolean > | Success: 200 with "OK" Fail:    | -- |
-| GET        | "/purchase/client/isTouchscreen" | value=<boolean >| 200 status code with "OK"    | -- |
-| GET        | "/purchase/client/isInteroperable" |value=<boolean >| 200 status code with "OK"    | -- |
-| GET        | "/purchase/client/name" |name=<String > | 200 status code with "OK"    | -- |
+| GET        | "/purchase/client/category/isWireless" |value=<boolean > |shows all the products with the desired Wireless type    |success: 200 WITH "OK" Fail : - -- |
+| GET        | "/purchase/client/isTouchscreen" | value=<boolean >| shows all the products with the desired Touchscreen type   |success: 200 WITH "OK" Fail : - -- |
+| GET        | "/purchase/client/isInteroperable" |value=<boolean >| shows all the products with the desired Interoperable type  |success: 200 WITH "OK" Fail : - -- |
+| GET        | "/purchase/client/name" |name=<String > | shows all the products with the given name     | success: 200 WITH "OK" Fail : 400 with "no product with given name"--- |
 
 
 
