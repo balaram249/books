@@ -23,6 +23,5 @@ jobs:
       run: mvn clean
     - name: Maven build and test
       run: mvn test
-    - name: Maven jacoco report
-      run: mvn jacoco:report
+   
     
