@@ -1,5 +1,7 @@
 com\example\springboot\demo\BookDoesNotExistException.class
+com\example\springboot\demo\BookService.class
 com\example\springboot\demo\DemoApplication.class
+com\example\springboot\demo\LibService.class
 com\example\springboot\demo\Book.class
 com\example\springboot\demo\BookRepository.class
 com\example\springboot\demo\BookController.class
