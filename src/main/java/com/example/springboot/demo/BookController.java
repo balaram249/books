@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -29,14 +30,18 @@ public ResponseEntity<List<Book>> getAllBooksWithName(@RequestParam String autho
 	System.out.println(author);
 	return new ResponseEntity(bookrepository.findByAuthor(author),HttpStatus.OK);
 }
-@PostMapping(path="/addbook",produces = "application/json", consumes = "application/x-www-form-urlencoded")
+//curl -d "author=sudeep&name=boot-camp" -H "Content-Type: application/x-www-form-urlencoded" -X POST http://localhost:8080/addbook
+@CrossOrigin(origins="*")
+@PostMapping(path="/addbook",produces = "application/json", consumes = "application/json")
 
-public String addBook(@RequestParam String author,@RequestParam String name)
+public void addBook(@RequestBody Book temp_book)
 {
-	Book book=new Book(5,author,name);
+	Book book=new Book(temp_book.getAuthor(),temp_book.getName());
+	
 	bookrepository.save(book);
-	return ("the author of the book is "+book.getAuthor());
+	//return ("the author of the book is "+book.getAuthor());
 }
+@CrossOrigin(origins="*")
 @DeleteMapping("/books")
 public void deleteByAuthor(@RequestParam String author) throws BookDoesNotExistException
 {
@@ -48,6 +53,7 @@ public void deleteByAuthor(@RequestParam String author) throws BookDoesNotExistE
 		bookrepository.deleteById(b.get(i).getId()); 
 	}}
 }
+@CrossOrigin(origins="*")
 @PutMapping("/books")
 public List<Book> updateBook(@RequestParam String author, @RequestParam String updatename)
 {

@@ -20,6 +20,12 @@ public class Book
 		this.setId(id);
 		this.setName(name);
 	}
+	public Book(String name,String author)
+	{
+		this.setAuthor(author);
+		//this.setId(id);
+		this.setName(name);
+	}
 	public int getId() {
 		return id;
 	}
