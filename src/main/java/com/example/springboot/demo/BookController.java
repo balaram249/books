@@ -31,6 +31,7 @@ public ResponseEntity<List<Book>> getAllBooksWithName(@RequestParam String autho
 	return new ResponseEntity(bookrepository.findByAuthor(author),HttpStatus.OK);
 }
 //curl -d "author=sudeep&name=boot-camp" -H "Content-Type: application/x-www-form-urlencoded" -X POST http://localhost:8080/addbook
+//>curl -i -X POST -H "Content-Type: application/json" -d "{\"id\": 1,\"author\":\"bbb\",\"name\" : \"bbbbaaaa\"}" http://localhost:8080/addbook
 @CrossOrigin(origins="*")
 @PostMapping(path="/addbook",produces = "application/json", consumes = "application/json")
 

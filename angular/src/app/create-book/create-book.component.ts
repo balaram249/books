@@ -25,6 +25,7 @@ export class CreateBookComponent implements OnInit {
     this.router.navigate(['/books']);
   }
   onSubmit(){
+    
     console.log(this.book);
     this.saveBook();
   }
