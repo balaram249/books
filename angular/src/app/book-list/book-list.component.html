@@ -5,7 +5,7 @@
             <th> ID</th>
             <th> AUTHOR </th>
             <th> NAME OF THE BOOK</th>
-            
+            <th> Actions </th>
         </tr>
     </thead>
     <tbody>
@@ -13,6 +13,11 @@
             <td> {{ book.id }} </td>
             <td> {{ book.author }} </td>
             <td> {{ book.name }} </td>
+            <td>
+                <button (click) = "updateBook(book.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteBook(book.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                
+            </td>
         </tr>
     </tbody>
 </table>

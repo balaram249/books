@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { BookListComponent } from './book-list/book-list.component';
 import { CreateBookComponent } from './create-book/create-book.component';
 import {  FormsModule} from "@angular/forms";
+import { UpdateBookComponent } from './update-book/update-book.component';
 @NgModule({
   declarations: [
     AppComponent,
     BookListComponent,
-    CreateBookComponent
+    CreateBookComponent,
+    UpdateBookComponent
   ],
   imports: [
     BrowserModule,

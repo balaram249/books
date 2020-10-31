@@ -1,5 +1,7 @@
 package com.example.springboot.demo;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -7,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -22,6 +25,12 @@ public class BookController {
 public List<Book> getAllBooks()
 {
 	return bookrepository.findAll();
+}
+//curl http://localhost:8080/books/id?id=2 -X GET
+@GetMapping("/books/{id}")
+public ResponseEntity<Book> getBookById(@PathVariable int id) {
+	Book book = bookrepository.findById(id).get();
+	return ResponseEntity.ok(book);
 }
 @GetMapping("/books/author")
 
@@ -43,7 +52,7 @@ public void addBook(@RequestBody Book temp_book)
 	//return ("the author of the book is "+book.getAuthor());
 }
 @CrossOrigin(origins="*")
-@DeleteMapping("/books")
+@DeleteMapping(path="/deletebook",produces = "application/json", consumes = "application/json")
 public void deleteByAuthor(@RequestParam String author) throws BookDoesNotExistException
 {
 	List<Book> b=bookrepository.findByAuthor(author);
@@ -55,15 +64,29 @@ public void deleteByAuthor(@RequestParam String author) throws BookDoesNotExistE
 	}}
 }
 @CrossOrigin(origins="*")
-@PutMapping("/books")
-public List<Book> updateBook(@RequestParam String author, @RequestParam String updatename)
+@PutMapping(path="/updatebook",produces = "application/json", consumes = "application/json")
+public void updateBook(@RequestBody Book temp_book)
 {
-	List<Book> b=bookrepository.findByAuthor(author);
-	for(int i=0;i<b.size();i++)
-	{
-		b.get(i).setAuthor(author);
-		b.get(i).setName(updatename);
-	}
-	return b;
+	Book b=bookrepository.findById(temp_book.getId()).get();
+	b.setAuthor(temp_book.getAuthor());
+	b.setName(temp_book.getName());
+	bookrepository.save(b);
+	//List<Book> b=bookrepository.findByAuthor(author);
+	//for(int i=0;i<b.size();i++)
+	//{
+		//b.get(i).setAuthor(author);
+	//	b.get(i).setName(updatename);
+	//}//
+//	return b;
 }
+@DeleteMapping("/employees/{id}")
+public ResponseEntity<Map<String, Boolean>> deleteBook(@PathVariable int id){
+	Book book = bookrepository.findById(id).get();
+	
+	bookrepository.delete(book);
+	Map<String, Boolean> response = new HashMap<>();
+	response.put("deleted", Boolean.TRUE);
+	return ResponseEntity.ok(response);
+}
+
 }
